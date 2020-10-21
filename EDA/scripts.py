@@ -3,6 +3,9 @@ import numpy as np
 
 
 def clean_data(dataframe):
+    '''
+    remove unnamed columns from main dataframe, converts date column to datetime, seperates the month and year into seperate columns, then drops the date column.
+    '''
     dataframe.drop(columns='Unnamed: 0', inplace=True)
     dataframe['date'] = pd.to_datetime(dataframe['date'])
 
@@ -20,12 +23,13 @@ def no_bedrooms(dataframe, df2):
     print(dataframe.shape)
     return dataframe
 
-def price_distribution(dataframe):
-    fig, ax = plt.subplots(figsize=(12,5))
-    ax.hist(dataframe['price'], bins=100);
-    ax.set_title('Housing Prices');
 
 def multicolinear_features(data):
+    '''
+    input: dataframe
+    returns a dataframe of all colinear features in a dataframe.
+    '''
+
     df=data.corr().abs().stack().reset_index().sort_values(0, ascending=False)
     df['pairs'] = list(zip(df.level_0, df.level_1))
     df.set_index(['pairs'], inplace = True)
@@ -34,7 +38,11 @@ def multicolinear_features(data):
     return df[(df.cc>.75) & (df.cc <1)]
 
 def remove_outliers(dataframe, feature):
+    '''
+    input: dataframe, feature
 
+    Uses IQR to drop feature outliers from the dataframe.
+    '''
     Q1 = dataframe[feature].quantile(.25)
     Q3 = dataframe[feature].quantile(.75)
     IQR = Q3 - Q1
