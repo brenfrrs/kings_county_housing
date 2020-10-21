@@ -32,3 +32,13 @@ def multicolinear_features(data):
     df.drop(columns=['level_1', 'level_0'], inplace = True)
     df.columns = ['cc']
     return df[(df.cc>.75) & (df.cc <1)]
+
+def remove_outliers(dataframe, feature):
+
+    Q1 = dataframe[feature].quantile(.25)
+    Q3 = dataframe[feature].quantile(.75)
+    IQR = Q3 - Q1
+    lower_range = Q1 - (1.5 * IQR)
+    upper_range = Q3 + (1.5 * IQR)
+    dataframe.drop(dataframe[(dataframe[feature] > upper_b) | (dataframe[feature] < lower_b)].index , inplace=True)
+    print('Removed {} outliers above or below {}, {}'.format(feature, lower_range, upper_range))
