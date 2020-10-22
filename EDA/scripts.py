@@ -50,3 +50,8 @@ def remove_outliers(dataframe, feature):
     upper_range = Q3 + (1.5 * IQR)
     dataframe.drop(dataframe[(dataframe[feature] > upper_b) | (dataframe[feature] < lower_b)].index , inplace=True)
     print('Removed {} outliers above or below {}, {}'.format(feature, lower_range, upper_range))
+
+
+def clean_beds(dataframe):
+    median_beds = dataframe.bedrooms.median()
+    dataframe['bedrooms'].values[dataframe['bedrooms'].values > 10] = median_beds
