@@ -6,7 +6,7 @@ By, Brendan Ferris
 
 ## Overview
 
-Using the Kings County Dataset and external zipcode data, a predictive linear model was built in order to estimate home prices in Kings County, Washington. Through an initial inspection of the highest and lowest home prices in the county, it is clear that the northern region of the county was home the home of more affluent residents, while the lower portion of the county had the lowest valued homes:
+Using the Kings County Dataset and external zipcode data a predictive linear model was built in order to estimate home prices in Kings County, Washington. Through an initial inspection of the highest and lowest home prices in the county, it is clear that the northern region of the county was home the home of more affluent residents, while the lower portion of the county had the lowest valued homes:
 
 ![highest and lowest priced homes](highest_and_lowest_priced_homes.png)
 
@@ -22,9 +22,11 @@ While analyzing the data, I posed three questions:
 
 My initial statistical analysis indicated that these were three significant features for housing prices.
 
+Through non-linear modifications of my model features, I was able to improve my RMSE from a baseline score of 198822 to 122664. The polynomial features of my model sacrifice interpretability for accuracy.
 
 
 
+![model residuals](model_residuals.png)
 
 
 ## Next Steps
