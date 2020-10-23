@@ -1,6 +1,6 @@
 # Kings County Housing Predictions
 
-![Kings County](eda/king_county.jpeg)
+![Kings County](eda/KClogo_LONG.png)
 
 
 
