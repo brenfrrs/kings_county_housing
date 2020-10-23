@@ -55,3 +55,4 @@ def remove_outliers(dataframe, feature):
 def clean_beds(dataframe):
     median_beds = dataframe.bedrooms.median()
     dataframe['bedrooms'].values[dataframe['bedrooms'].values > 10] = median_beds
+    print('Entries with an abnormal amount of bedrooms have been replaced with {}, the median number of bedrooms in the dataframe. \n'.format(median_beds))
