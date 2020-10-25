@@ -1,6 +1,6 @@
 # Kings County Housing Predictions
 
-![Kings County](KClogo_LONG.png)
+![Kings County](images/KClogo_LONG.png)
 
 By, Brendan Ferris
 
