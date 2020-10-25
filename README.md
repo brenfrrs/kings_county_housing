@@ -13,6 +13,7 @@ Using the Kings County Dataset a predictive linear model was built in order to e
 
 ![home price distribution](images/home_price_distribution.png)
 
+![predictions distribution](images/distribution_of_predictions.png)
 
 While analyzing the data, I posed three questions:
 
