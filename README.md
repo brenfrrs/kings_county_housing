@@ -30,7 +30,7 @@ I believe that with a RMSE hovering between 137k and 166k-- my model performs we
 
 ### For More Information
 
-To see out full analysis, please refer to the [Jupyter Notebook](Kings_County_Housing_Project.ipynb)
+To see out full analysis, please refer to the [Jupyter Notebook](King_County_Housing_Project.ipynb)
 
 For additional info, contact <brendanfrrs@gmail.com>
 
