@@ -15,15 +15,8 @@ Using the Kings County Dataset a predictive linear model was built in order to e
 
 ![predictions distribution](images/distribution_of_predictions.png)
 
-While analyzing the data, I posed three questions:
 
-1. Do areas that have more home renters have higher home prices?
-2. Do houses built in the past after 2005 fetch higher prices than older houses?
-3. Do the amount of available homes in an area have an effect on the price of the homes in that area?
-
-My initial statistical analysis indicated that these were three significant features for housing prices.
-
-Through non-linear modifications of my model features, I was able to improve my RMSE from a baseline score of 198822 to 122664. The polynomial features of my model sacrifice interpretability for accuracy.
+Through non-linear modifications of my model features, I was able to improve my RMSE from a baseline score of 198k to 137k. The polynomial features of my model sacrifice interpretability for accuracy.
 
 
 
